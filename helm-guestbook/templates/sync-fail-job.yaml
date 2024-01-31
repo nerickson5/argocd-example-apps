@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: app-deployment-failed-{{ .Release.Revision }}
+  annotations:
+    argocd.argoproj.io/hook: SyncFail
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: deployment-failed
+        image: curlimages/curl
+        command:
+          - "echo my sync failed and I ran"
+      restartPolicy: Never
+  backoffLimit: 2
