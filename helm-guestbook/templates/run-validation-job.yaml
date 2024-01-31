@@ -11,6 +11,6 @@ spec:
       containers:
       - name: run-validation
         image: alpine:latest
-        command: ["sleep", "10"]
+        command: ["echo help me", "sleep", "10"]
       restartPolicy: Never
   backoffLimit: 2
