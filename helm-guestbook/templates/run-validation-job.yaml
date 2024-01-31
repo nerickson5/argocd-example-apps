@@ -10,8 +10,7 @@ spec:
     spec:
       containers:
       - name: run-validation
-        image: curlimages/curl
-        command:
-          - "echo my sync was successful and I ran"
+        image: bash:latest
+        command: ["echo running my validation", "sleep", "10"]
       restartPolicy: Never
   backoffLimit: 2

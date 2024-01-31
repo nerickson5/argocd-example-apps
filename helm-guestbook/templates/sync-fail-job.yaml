@@ -10,8 +10,7 @@ spec:
     spec:
       containers:
       - name: deployment-failed
-        image: curlimages/curl
-        command:
-          - "echo my sync failed and I ran"
+        image: bash:latest
+        command: ["echo notify my of failure to sync", "sleep", "10"]
       restartPolicy: Never
   backoffLimit: 2
