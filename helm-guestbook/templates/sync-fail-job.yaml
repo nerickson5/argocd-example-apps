@@ -4,7 +4,7 @@ metadata:
   name: app-deployment-failed-{{ .Release.Revision }}
   annotations:
     argocd.argoproj.io/hook: SyncFail
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 spec:
   template:
     spec:

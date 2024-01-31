@@ -4,13 +4,13 @@ metadata:
   name: app-validation-{{ .Release.Revision }}
   annotations:
     argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 spec:
   template:
     spec:
       containers:
       - name: run-validation
         image: alpine:latest
-        command: ["sleep", "10"]
+        command: ["echo fail", "sleep", "10"]
       restartPolicy: Never
   backoffLimit: 0
