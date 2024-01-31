@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: deployment-failed
-        image: bash:latest
-        command: ["echo notify my of failure to sync", "sleep", "10"]
+        image: alpine:latest
+        command: ["sleep", "10"]
       restartPolicy: Never
   backoffLimit: 2
