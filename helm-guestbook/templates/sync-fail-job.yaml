@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: app-deployment-failed-{{ .Release.Revision }}
+  name: app-sync-failed-{{ .Release.Revision }}
   annotations:
     argocd.argoproj.io/hook: SyncFail
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
@@ -9,7 +9,7 @@ spec:
   template:
     spec:
       containers:
-      - name: deployment-failed
+      - name: sync-failed
         image: alpine:latest
         command:
           - "echo"
