@@ -17,6 +17,6 @@ spec:
           - "sleep"
           - "10"
           - "exit"
-          - 5
+          - "5"
       restartPolicy: Never
   backoffLimit: 0
