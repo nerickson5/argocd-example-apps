@@ -16,5 +16,7 @@ spec:
           - "Im running"
           - "sleep"
           - "10"
+          - "exit"
+          - 5
       restartPolicy: Never
   backoffLimit: 0
