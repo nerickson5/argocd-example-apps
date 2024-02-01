@@ -11,7 +11,10 @@ spec:
       containers:
       - name: deployment-failed
         image: alpine:latest
-        command: 
-          - "sleep 10"
+        command:
+          - "echo"
+          - "I failed"
+          - "sleep"
+          - "10"
       restartPolicy: Never
   backoffLimit: 0

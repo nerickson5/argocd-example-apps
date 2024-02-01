@@ -12,6 +12,9 @@ spec:
       - name: run-validation
         image: alpine:latest
         command: 
-          - "sleep 10"
+          - "echo"
+          - "Im running"
+          - "sleep"
+          - "10"
       restartPolicy: Never
   backoffLimit: 0
